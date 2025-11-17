@@ -221,6 +221,7 @@ async function run() {
 
     // Step 1: Basic skeleton from Starter Project
   await copyDir(starterProjectDir, targetDir);
+  await fs.promises.mkdir(path.join(targetDir, "src"), { recursive: true });
 
     // Step 2: Download templates into docs
   await downloadTemplatesIntoProject(targetDir);

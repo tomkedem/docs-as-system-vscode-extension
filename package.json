@@ -1,6 +1,6 @@
 {
   "name": "docs-as-system",
-  "displayName": "Docs-as-System-he Starter Kit (AI Agent Development Scaffolder)",
+  "displayName": "Docs-as-System Starter Kit (AI Agent Development Scaffolder)",
   "publisher": "TomerKedem",
   "description": "Create fully structured Docs-as-System projects with integrated AI Agent workflows, templates, and operational policies. All generated documentation and project templates are written in Hebrew to support teams working natively in the language.",
   "version": "0.1.0",
