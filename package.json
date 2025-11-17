@@ -26,7 +26,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "docsAsSystem.initProject",
+        "command": "docsAsSystemEn.initProject",
         "title": "Create New Docs-as-System Project",
         "category": "Docs-as-System"
       }

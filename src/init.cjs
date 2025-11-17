@@ -2,11 +2,11 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 
-// עדכן כאן אם שם המשתמש או הריפו שונים
+// Update here if the username or repo are different
 const GITHUB_RAW_BASE =
-  "https://raw.githubusercontent.com/tomkedem/Docs-as-System-StarterKit-He/main/templates";
+  "https://raw.githubusercontent.com/tomkedem/docs-as-system-starterkit/main/templates";
 
-// כל קובצי התבנית והיעד שלהם בפרויקט החדש
+// All template files and their destination in the new project
 const TEMPLATE_FILES = [
   // agent
   {
@@ -68,8 +68,8 @@ const TEMPLATE_FILES = [
     dest: "docs/logs/IMPLEMENTATION_LOG_BY_CYCLE.md"
   },
   {
-    src: "logs/IMPLEMENTATION_LOG_SUMMARY_TEMPLATE.he.md",
-    dest: "docs/logs/IMPLEMENTATION_LOG_SUMMARY.he.md"
+    src: "logs/IMPLEMENTATION_LOG_SUMMARY_TEMPLATE.md",
+    dest: "docs/logs/IMPLEMENTATION_LOG_SUMMARY.md"
   },
   {
     src: "logs/IMPLEMENTATION_LOG_SUMMARY_TEMPLATE.en.md",
@@ -118,7 +118,7 @@ const TEMPLATE_FILES = [
   }
 ];
 
-// הורדת קובץ בודד
+// Download a single file
 function downloadFile(url, destPath) {
   return new Promise((resolve, reject) => {
     const dir = path.dirname(destPath);
@@ -149,7 +149,7 @@ function downloadFile(url, destPath) {
   });
 }
 
-// העתקת שלד starter-project (src, docs ריקים, README וכדומה)
+// Copy starter-project skeleton (empty src, docs, README, etc.)
 async function copyDir(source, target) {
   await fs.promises.mkdir(target, { recursive: true });
   const entries = await fs.promises.readdir(source, { withFileTypes: true });
@@ -166,7 +166,7 @@ async function copyDir(source, target) {
   }
 }
 
-// הורדת כל התבניות מגיטהאב לתוך docs של הפרויקט
+// Download all templates from GitHub into the project's docs folder
 async function downloadTemplatesIntoProject(targetDir) {
   console.log("[Docs-as-System Extension] Downloading templates from GitHub into project structure ...");
 
@@ -219,10 +219,10 @@ async function run() {
   console.log("        " + targetDir);
   console.log();
 
-  // שלב 1: שלד בסיסי מה Starter Project
+    // Step 1: Basic skeleton from Starter Project
   await copyDir(starterProjectDir, targetDir);
 
-  // שלב 2: הורדת תבניות לתוך docs
+    // Step 2: Download templates into docs
   await downloadTemplatesIntoProject(targetDir);
 
   console.log("[Docs-as-System Extension] Done.\n");
