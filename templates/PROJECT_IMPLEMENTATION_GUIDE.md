@@ -101,20 +101,108 @@ It supports accurate discussion and helps refine the system structure until it i
 
 ---
 
-## Stage Four  
-### Architecture Decision Records – ADR
+## Step Four  
+### Architecture Decision Records (ADR)
 
-Here you document major system decisions that may influence the future of the project.  
-For example, choosing a specific framework, selecting an architectural pattern, or defining a significant structural change.
+This stage documents the architectural decisions that shape the system.  
+A decision that is not documented does not exist for the agent and is not considered part of the official architecture.
 
-Each decision includes:
+Work according to a clear and consistent structure:
+
+---
+
+### 📁 Where ADRs Are Stored
+
+Each decision is a separate file located in:
+
+```
+docs/architecture/decisions/
+```
+
+---
+
+### 🧩 Required File Name Format
+
+To preserve ordering, discoverability, and consistency, each file must follow:
+
+```
+ADR-YYYY-NN_<topic>.md
+```
+
+For example:
+
+```
+ADR-2025-09_Monolith_vs_Microservices.md
+```
+
+- YYYY — the year the decision was written  
+- NN — a sequential number for that year  
+
+This numbering format is essential for clarity and automated processing.
+
+---
+
+### 📚 The ADR Index
+
+Every ADR must also be listed in the central index file:
+
+```
+docs/architecture/decisions/ADR_INDEX.md
+```
+
+The index provides:
+
+- A clear map of all architectural decisions  
+- Prevention of duplication  
+- Context the agent can rely on  
+- Fast navigation for developers  
+
+This file is generated and maintained according to:
+
+```
+MethodologyTemplates/architecture/ADR_INDEX_TEMPLATE.md
+```
+
+---
+
+### 📝 How to Write an ADR
+
+Use the official template:
+
+```
+MethodologyTemplates/architecture/ADR_TEMPLATE.md
+```
+
+Each ADR includes:
 
 • What was decided  
 • Why it was decided  
-• Which alternatives were considered  
-• What the implications are  
+• Alternatives that were considered  
+• Expected impact  
+• Success metrics  
+• References to related documents  
 
-Again, it is recommended to use an external model to draft and refine the text.
+Taking the time to write a proper ADR prevents future contradictions  
+and enables the agent to operate with full architectural context.
+
+---
+
+### 🤖 Should You Use a Chat Model?
+
+Yes.  
+It helps refine reasoning, compare alternatives, and produce a clear and consistent document.  
+However, it is critical to follow the template structure exactly.
+
+---
+
+### 🎯 Why This Stage Matters
+
+- Creates a durable “architectural memory”  
+- Prevents conflicting decisions  
+- Gives the agent a reliable map of system intent  
+- Ensures development aligns with the planned architecture  
+
+This is one of the most important steps in the Docs-as-System workflow.
 
 ---
 

@@ -69,3 +69,7 @@ git:
     trailers:
       # Shared attribution for the local agent that performed the change.
       - "Co-authored-by: cargo-helper <agent@local>"
+
+  
+
+# © 2025 Tomer Kedem. Part of the official **Docs-as-System** template suite.    

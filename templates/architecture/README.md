@@ -64,4 +64,4 @@ and enables real oversight over how the system is built, evolves and is maintain
 
 ---
 
-© 2025 Tomer Kedem. Part of the official **Docs-as-System** template collection.
+> © 2025 Tomer Kedem. Part of the official **Docs-as-System** template collection.

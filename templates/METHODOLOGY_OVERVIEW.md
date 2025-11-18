@@ -204,22 +204,145 @@ Every decision is documented so that in the future it is possible to revisit it,
 ---
 
 ### 📄 ARCHITECTURE_BLUEPRINT_TEMPLATE.md  
-This is the primary document in this folder. It is a direct translation of the functional specification into an engineering structure.  
-The document describes the system layers, its main components, the data flows between them and the communication interfaces such as APIs, events and queues.  
-It also details the core technologies that will be used such as database, framework and runtime, the connections to external services and the deployment approach.  
-The document also specifies the control points such as where permissions are checked, how logs are recorded and when communication occurs between components.  
-Its purpose is to help the development team and the agents understand how the requirements translate into code and to ensure that every implementation decision remains aligned with the original intent.  
-It also acts as a central collaboration document between architects, developers and product managers and allows all parties to speak the same language.
+This is the primary engineering document in the architecture folder.  
+It is created from the official template:
+
+```
+MethodologyTemplates/architecture/ARCHITECTURE_BLUEPRINT_TEMPLATE.md
+```
+
+The blueprint translates the functional specification into a clear, structured engineering model.  
+It describes the system’s layers, core components, responsibilities, and the data flows between them, including communication interfaces such as APIs, events and queues.
+
+The document also specifies the main technical decisions that shape the system:  
+the database and runtime environment, the frameworks being used, integration points with external systems, and the planned deployment approach.
+
+It defines control points such as where permissions are validated, how logs are recorded, and when components communicate during the system lifecycle.
+
+The blueprint serves as the architectural source of truth from which ADRs are derived.  
+While the blueprint explains *what* the architecture is, ADRs document the key decisions that *led to it* and any changes made over time.
+
+Its purpose is to ensure that developers, architects and product managers share the same mental model of the system,  
+and that every implementation step — human or agent — remains aligned with the original architectural intent.
+
+
+---
+### 📄 ADR_INDEX_TEMPLATE.md  
+This file is the official template for creating the Architectural Decision Record Index (ADR Index) in a project.  
+The index is stored in:
+
+```
+docs/architecture/decisions/ADR_INDEX.md
+```
+
+The index gathers all ADRs in the system and provides:
+
+• A quick understanding of the system’s decision map  
+• Prevention of duplicate or conflicting decisions  
+• Clear context for the agent  
+• Easy navigation between decisions  
+
+Each line in the index refers to exactly one ADR.
+
+The template used to generate the index is located at:
+
+```
+MethodologyTemplates/architecture/ADR_INDEX_TEMPLATE.md
+```
 
 ---
 
+### 📁 ADR File Name Format
+
+Every ADR must follow this naming convention:
+
+```
+ADR-YYYY-NN_<topic>.md
+```
+
+For example:
+
+```
+ADR-2025-09_Monolith_vs_Microservices.md
+```
+
+The sequential NN number ensures proper ordering and long-term traceability.
+
+---
+
+### 📑 Example of a Valid Index Entry
+
+Each entry must follow this format:
+
+```
+- [ADR-YYYY-NN Decision Title](ADR-YYYY-NN_<topic>.md)
+```
+
+Example:
+
+```
+- [ADR-2025-09 Choosing a Modular Monolith over Microservices](ADR-2025-09_Monolith_vs_Microservices.md)
+```
+
+---
+
+### 📝 Update Guidelines
+
+• Every new ADR must be added to the index  
+• The entries should be ordered by their sequential number (NN)  
+• ADRs that were replaced or deprecated must remain in the index for historical clarity  
+• The agent may update this file automatically, but a human may update it as well  
+
+The ADR Index serves as the official “decision map” of the system,  
+allowing both humans and the agent to work with a shared and consistent architectural context.
+
+---
 ### 📄 ADR_TEMPLATE.md  
-This document records architectural decisions. These are significant decisions made during the system design that may affect its future.  
-Each architectural decision is documented in a consistent format that includes the context (what problem needs to be solved), the alternatives considered, the final decision, the reasoning behind it and the expected consequences whether technical, operational or performance related.  
-The purpose of the document is to create a clear historical record of structural choices so that in the future when someone asks why solution X was chosen instead of Y the answer is documented, accessible and clearly reasoned.  
-The document prevents improvised decisions or arbitrary changes to the architecture and ensures that any future modification is made with full awareness of previous decisions.  
-Every ADR includes a date, a unique identifier and the name of the person or team who made the decision. It remains part of the project documentation even if the implementation later evolves.  
-It is an essential tool for long term maintenance, knowledge transfer and maintaining structural consistency over time.
+This file documents **Architecture Decision Records** using the official Docs-as-System structure.  
+ADRs are stored in:
+
+```
+docs/architecture/decisions/
+```
+
+Each ADR is a standalone file with a sequential identifier:
+
+```
+ADR-YYYY-NN_<topic>.md
+```
+
+For example:
+
+```
+ADR-2025-09_Monolith_vs_Microservices.md
+```
+
+Every ADR must be listed in:
+
+```
+docs/architecture/decisions/ADR_INDEX.md
+```
+
+The index provides a full map of architectural decisions that both humans and the agent rely on.
+
+The template used for creating new ADRs is:
+
+```
+MethodologyTemplates/architecture/ADR_TEMPLATE.md
+```
+
+Each ADR includes:
+
+• The context  
+• Alternatives considered  
+• The final decision  
+• Rationale  
+• Expected consequences  
+• Success metrics  
+• Links to related documents  
+
+This structure ensures long-term clarity, prevents conflicting decisions,  
+and provides the agent with full architectural intent.
 
 ---
 

@@ -32,8 +32,12 @@ const TEMPLATE_FILES = [
 
   // architecture
   {
+    src: "architecture/ADR_INDEX_TEMPLATE.md",
+    dest: "docs/architecture/decisions/ADR_INDEX.md"
+  },
+  {
     src: "architecture/ADR_TEMPLATE.md",
-    dest: "docs/architecture/ADR.md"
+    dest: "docs/architecture/decisions/ADR.md"
   },
   {
     src: "architecture/ARCHITECTURE_BLUEPRINT_TEMPLATE.md",
