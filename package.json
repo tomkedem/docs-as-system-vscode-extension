@@ -3,7 +3,7 @@
   "displayName": "Docs-as-System Starter Kit (AI Agent Development Scaffolder)",
   "publisher": "TomerKedem",
   "description": "Create fully structured Docs-as-System projects with integrated AI Agent workflows, templates, and operational policies. All generated documentation and project templates are written in Hebrew to support teams working natively in the language.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "icon": "images/icon.png",
   "engines": {
