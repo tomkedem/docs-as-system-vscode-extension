@@ -8,7 +8,7 @@ and adjust it to your organization and system needs.
 # Project Changelog
 
 This file serves as a template for documenting significant changes in the project.  
-It is created automatically when `das he` initializes a new project.
+It is created automatically when `das` initializes a new project.
 
 Update it whenever a meaningful change is introduced  
 and maintain a clear history of the project's evolution.
@@ -17,7 +17,7 @@ and maintain a clear history of the project's evolution.
 ## Suggested Update Format
 
 ### Initial Version  
-• Created initial project using `das he`  
+• Created initial project using `das <project name>`  
 • Generated documentation structure based on Docs as System  
 
 ### Example of a Future Update  
